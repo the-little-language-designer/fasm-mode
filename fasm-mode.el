@@ -94,7 +94,10 @@
         "native" "static" "console" "dynamic" "efiboot" "linkinfo" "readable"
         "resource" "writable" "shareable" "writeable" "efiruntime"
         "executable" "linkremove" "discardable" "interpreter" "notpageable"
-        "if" "end" "err" "org" "data" "else" "heap" "load" "align" "break"
+        "if"
+        "end"
+        "finish" ;; as end
+        "err" "org" "data" "else" "heap" "load" "align" "break"
         "entry" "extrn" "label" "stack" "store" "times" "while" "assert"
         "format" "public" "repeat" "display" "section" "segment" "virtual"
         "file")) . 'font-lock-keyword-face)
