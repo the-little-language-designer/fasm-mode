@@ -81,7 +81,9 @@
     ;; Types
     (,(eval-when-compile
        (fasm--regexp-from-keywords
-        "xx" "preserve" 
+        "xx"
+        "xxxx"
+        "preserve"
         "byte" "word" "dword" "fword" "pword" "qword" "tbyte" "tword"
         "dqword" "xword" "qqword" "yword" "db" "rb" "dw" "du" "rw" "dd" "rd"
         "df" "dp" "rf" "rp" "dq" "rq" "dt" "rt")) . 'font-lock-type-face)
@@ -94,9 +96,17 @@
         "native" "static" "console" "dynamic" "efiboot" "linkinfo" "readable"
         "resource" "writable" "shareable" "writeable" "efiruntime"
         "executable" "linkremove" "discardable" "interpreter" "notpageable"
+
         "if"
         "end"
+        "tail_call"
         "finish" ;; as end
+
+        "literal"
+        "address"
+        "branch"
+        "false?branch"
+
         "err" "org" "data" "else" "heap" "load" "align" "break"
         "entry" "extrn" "label" "stack" "store" "times" "while" "assert"
         "format" "public" "repeat" "display" "section" "segment" "virtual"
@@ -114,8 +124,14 @@
         "r12b" "r13b" "r14b" "r15b" "ah" "bh" "ch" "dh" "ax" "bx" "cx" "dx"
         "sp" "bp" "si" "di" "r8w" "r9w" "r10w" "r11w" "r12w" "r13w" "r14w"
         "r15w" "eax" "ebx" "ecx" "edx" "esp" "ebp" "esi" "edi" "r8d" "r9d"
-        "r10d" "r11d" "r12d" "r13d" "r14d" "r15d" "rax" "rbx" "rcx" "rdx"
-        "rsp" "rbp" "rsi" "rdi" "r8" "r9" "r10" "r11" "r12" "r13" "r14" "r15"
+        "r10d" "r11d" "r12d" "r13d" "r14d" "r15d"
+
+        "rax" "rbx" "rcx" "rdx" "rsp" "rbp" "rsi" "rdi"
+        "r8" "r9" "r10" "r11" "r12" "r13" "r14" "r15"
+
+        ;; "xax" "xbx" "xcx" "xdx" "xsp" "xbp" "xsi" "xdi"
+        ;; "x8" "x9" "x10" "x11" "x12" "x13" "x14" "x15"
+
         "rip" "es" "cs" "ss" "ds" "fs" "gs" "cr0" "cr2" "cr3" "cr4" "dr0"
         "dr1" "dr2" "dr3" "st0" "st1" "st2" "st3" "st4" "st5" "st6" "st7"
         "mm0" "mm1" "mm2" "mm3" "mm4" "mm5" "mm6" "mm7" "xmm0" "xmm1" "xmm2"
